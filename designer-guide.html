@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Designer Guide | Recipe of Life</title>
+    <meta name="description" content="Recipe of Life 新サイト修正指示ガイド">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=case-card2">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Recipe of Life ホーム">
+        <span class="brand-mark">Recipe of Life</span>
+        <span class="brand-name">修正指示ガイド</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Mock</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="works.html">Works</a>
+        <a href="#checklist">Checklist</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="guide-hero">
+        <p class="eyebrow">Recipe of Life redesign guide</p>
+        <h1>写真で見せるサイトから、<br>言葉と構造で信頼をつくるサイトへ。</h1>
+        <p>
+          このページはSTUDIO本番環境を直接編集するためのものではなく、デザイナーさんに共有する完成方向の再現モックです。
+          トップページは <a href="index.html">index.html</a>、下層は <a href="about.html">About</a>、
+          <a href="service.html">Service</a>、<a href="works.html">Works</a>、<a href="works-villa.html">Works詳細</a> を基準にしてください。
+        </p>
+        <div class="guide-alert">
+          <strong>重要: 原稿テキストは変更しない</strong>
+          <p>
+            CodePenおよびSTUDIOに記載されている既存テキストは、そのまま使用してください。
+            このモックで示しているのは、文章の書き換えではなく、見出し階層・配置・余白・情報のまとまり方です。
+            Codexが仮で入れた要約文は <a href="reference-copy-notes.md">reference-copy-notes.md</a> に分離しています。
+          </p>
+        </div>
+      </section>
+
+      <section class="section guide-section">
+        <div class="section-heading">
+          <p class="eyebrow">Core rule</p>
+          <h2>最重要ルール</h2>
+        </div>
+        <div class="rule-grid">
+          <article>
+            <h3>原稿はそのまま使う</h3>
+            <p>CodePen / STUDIOにある本文・見出し・カテゴリ名は変更しない。修正対象は情報整理、配置、見え方のみ。</p>
+          </article>
+          <article>
+            <h3>文字色は全箇所 #3a3a38</h3>
+            <p>ベージュ背景でも白背景でも本文・見出し・ボタン文字・フッター文字はすべて同じDark Charcoalに統一。</p>
+          </article>
+          <article>
+            <h3>写真は補助要素</h3>
+            <p>料理写真を大きく見せない。使う場合はテーブルセッティングや資料イメージとして、テキスト面積より小さく扱う。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guide-section beige">
+        <div class="section-heading">
+          <p class="eyebrow">Before / After</p>
+          <h2>現状からの変更方針</h2>
+        </div>
+        <div class="compare-grid">
+          <article class="compare-card is-ng">
+            <p class="compare-label">NG: 現状寄り</p>
+            <div class="mini-hero bad">
+              <div>
+                <span class="mini-logo">/Sample</span>
+                <h3>誰かの食べたいが、次のヒットをつくる</h3>
+                <p>説明文が長く、写真とロゴが主張している。</p>
+              </div>
+              <div class="mini-photo"></div>
+            </div>
+            <ul>
+              <li>ロゴが仮のまま</li>
+              <li>写真が料理・ビジュアル主役に見える</li>
+              <li>CTAが「サービスを見る」になっている</li>
+              <li>本文色が薄いグレーだと読みにくい</li>
+            </ul>
+          </article>
+          <article class="compare-card is-ok">
+            <p class="compare-label">OK: 修正後</p>
+            <div class="mini-hero good">
+              <div>
+                <span class="mini-logo">Recipe of Life</span>
+                <h3>食の課題を、心が動く体験へ。</h3>
+                <p>経営課題、認知心理学、上流設計が一目で伝わる。</p>
+              </div>
+              <div class="mini-photo"></div>
+            </div>
+            <ul>
+              <li>ファーストビューは約70〜75vh</li>
+              <li>下にNEWSの入口が見える</li>
+              <li>主CTAはお問い合わせ</li>
+              <li>写真は右側に小さく、補助的に配置</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guide-section" id="checklist">
+        <div class="section-heading wide">
+          <p class="eyebrow">Checklist</p>
+          <h2>セクション別修正</h2>
+          <p>STUDIO上では、各セクションを以下の単位で修正してください。</p>
+        </div>
+        <div class="checklist">
+          <article>
+            <h3>1. Header</h3>
+            <p>/Sampleを削除し、Recipe of Life / 株式会社レシピオブライフへ。ナビはAbout、Service、Works、Contact。</p>
+          </article>
+          <article>
+            <h3>2. First View</h3>
+            <p>高さは100vhにしない。PCは約74vh、スマホは写真を非表示または極小背景扱い。下に次セクションを見せる。</p>
+          </article>
+          <article>
+            <h3>3. CTA</h3>
+            <p>主ボタンは「ご相談・お問い合わせはこちら」。副ボタンは「実績を見る」。「サービスを見る」は削除。</p>
+          </article>
+          <article>
+            <h3>4. NEWS</h3>
+            <p>写真なしの3カード。日付、カテゴリ、タイトルのみ。カード高さ・余白・タイトル位置を統一。</p>
+          </article>
+          <article>
+            <h3>5. Service</h3>
+            <p>3カード水平整列。各カード冒頭に経営者の課題文を入れる。写真を使う場合も小さく補助扱い。</p>
+          </article>
+          <article>
+            <h3>6. Works</h3>
+            <p>写真ゼロにはしない。各案件に小さな写真またはバナー枠を入れ、課題→設計→成果のテキスト構造を主役にする。</p>
+          </article>
+          <article>
+            <h3>7. Page CTA</h3>
+            <p>全ページ末尾に必ずContact CTAを入れる。下層ページを読んだ後に、相談導線が途切れないようにする。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guide-section beige" id="studio">
+        <div class="section-heading">
+          <p class="eyebrow">Studio specs</p>
+          <h2>STUDIOでの具体値</h2>
+        </div>
+        <div class="spec-table" role="table" aria-label="STUDIO具体指定">
+          <div role="row"><strong>本文色</strong><span>#3a3a38 固定</span></div>
+          <div role="row"><strong>背景色</strong><span>基本 #ffffff。#f5f2e9 は区切りやCTAなど必要な箇所で使用可。CodePenのベージュ背景へ全面的に寄せる必要はない</span></div>
+          <div role="row"><strong>アクセント</strong><span>#b4a785 はボタン背景・線・罫線に使用。文字色には使わない</span></div>
+          <div role="row"><strong>FV高さ</strong><span>PC: 約70〜75vh / スマホ: コンテンツ高さに合わせ、NEWSが早く見える構成</span></div>
+          <div role="row"><strong>FV写真</strong><span>PC右側、テキストより小さい面積。スマホは非表示または背景扱い</span></div>
+          <div role="row"><strong>カード</strong><span>3列同幅、同高さ、同余白。カード内テキスト位置を揃える</span></div>
+          <div role="row"><strong>CTA</strong><span>全ページ末尾にContact CTAを必ず設置</span></div>
+          <div role="row"><strong>禁止</strong><span>#63676b、料理写真の大面積使用、階段状カード、意味のない写真挿入。Worksの小さな写真・バナー枠は可</span></div>
+        </div>
+      </section>
+
+      <section class="section guide-section">
+        <div class="section-heading wide">
+          <p class="eyebrow">Lower pages</p>
+          <h2>下層ページの情報整理</h2>
+          <p>先方制作ページは文章・英日併記・リンクが連続し、読み手が「何を見ればいいか」を判断しづらい状態です。</p>
+        </div>
+        <div class="guide-alert">
+          <strong>TOPページの扱い</strong>
+          <p>
+            TOPは最初のSTUDIO構成を踏襲します。大きなセクション順は変えすぎず、色、文字色、CTA、写真比率、余白、視認性を調整してください。
+          </p>
+        </div>
+        <div class="checklist">
+          <article>
+            <h3>About</h3>
+            <p>冒頭は大きくしすぎず、下の本文がすぐ見える高さにする。Mission / Vision / Value / Profileを分ける。</p>
+          </article>
+          <article>
+            <h3>Service</h3>
+            <p>冒頭は大きくしすぎず、下のサービス内容がすぐ見える高さにする。3領域へ集約して読めるようにする。</p>
+          </article>
+          <article>
+            <h3>Works</h3>
+            <p>カテゴリ一覧と案件カードを分離。案件名、Client、タグなどの文言は既存のまま、各案件に小さな写真またはバナー枠を入れる。</p>
+          </article>
+          <article>
+            <h3>Works詳細</h3>
+            <p>CodePenのケーススタディ型に寄せる。タイトル、既存要約、横長バナー、案件メタ、Issue / Approach / Result、CTAの順で整理する。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
